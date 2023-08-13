@@ -1,12 +1,64 @@
+@import "../node_modules/flag-icons/css/flag-icons.min.css";
+@import "../node_modules/material-icons/iconfont/material-icons.css";
+@import '../node_modules/normalize.css/normalize.css';
+
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
 /* Remove default blue color from links */
 a {
-    color: inherit; /* Inherit color from parent */
-    text-decoration: none; /* Remove underline */
-  }
-  
-  /* Remove default bullets from list items */
-  ul {
-    list-style: none; /* Remove default bullets */
-    padding-left: 0; /* Remove left padding */
-  }
+  color: inherit;
+  /* Inherit color from parent */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+/* Remove default bullets from list items */
+ul {
+  list-style: none;
+  /* Remove default bullets */
+  padding-left: 0;
+  /* Remove left padding */
+}
+
+img,
+a {
+  border: none;
+  outline: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+section {
+  padding: 15px;
+}
