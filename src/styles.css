@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+/* Remove default blue color from links */
+a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Remove default bullets from list items */
+  ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0; /* Remove left padding */
+  }
