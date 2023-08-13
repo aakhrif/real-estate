@@ -40,3 +40,8 @@
     font-size: 17px;
     /* Adjust font size as needed */
 }
+
+section.header {
+    height: 140px;
+    border: 1px solid;
+}
