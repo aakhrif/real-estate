@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-box.component.css']
 })
 export class SearchBoxComponent {
-
+  tabTitles = ['Tab 1', 'Tab 2', 'Tab 3'];
 }

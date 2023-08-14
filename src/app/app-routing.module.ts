@@ -8,8 +8,6 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent}
 ];
 
-console.log(routes)
-
 @NgModule({
   declarations: [],
   imports: [

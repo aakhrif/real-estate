@@ -1,2 +1,6 @@
 <app-header></app-header>
+<app-tabbed>
+    [(tabTitles)]="tabTitles"
+    [tabContents]="['Content of Tab 1', 'Content of Tab 2', 'Content of Tab 3']">
+</app-tabbed>
 <router-outlet></router-outlet>

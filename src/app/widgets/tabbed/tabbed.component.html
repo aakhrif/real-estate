@@ -1,0 +1,11 @@
+<div class="tabbed-component">
+    <ul class="tab-titles">
+        <li *ngFor="let title of tabTitles; let i = index" [class.active]="i === activeTabIndex"
+            (click)="setActiveTab(i)">
+            {{ title }}
+        </li>
+    </ul>
+    <div class="tab-content">
+        {{ tabContents[activeTabIndex] }}
+    </div>
+</div>
