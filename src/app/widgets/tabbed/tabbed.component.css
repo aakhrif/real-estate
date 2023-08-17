@@ -1,0 +1,35 @@
+/* tabbed-component.component.css */
+.tabbed-component {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .tab-titles {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .tab-titles li {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab-titles li.active {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .tab-content {
+    margin-top: 10px;
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
