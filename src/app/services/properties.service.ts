@@ -24,7 +24,9 @@ interface Property {
 }
 
 interface Search {
-
+  location: {
+    city: string
+  }
 }
 
 @Injectable({
@@ -35,7 +37,7 @@ export class PropertiesService {
   constructor(private http: HttpClient) { }
 
   public searchProperties(search: Search): Observable<Property> {
-    const url = "http://localhost:4000/api/properties"
+    const url = "/api/properties/search"
     return this.http.post<Property>(url, search);
   }
 }

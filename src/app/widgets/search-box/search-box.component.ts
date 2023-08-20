@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject, debounceTime } from 'rxjs';
+import { PropertiesService } from 'src/app/services/properties.service';
 
 @Component({
   selector: 'app-search-box',
@@ -8,12 +9,19 @@ import { Subject, debounceTime } from 'rxjs';
 })
 export class SearchBoxComponent implements OnInit {
   userInput$ = new Subject<string>();
+  someTemporaryResults = {};
+  constructor(private propertiesService: PropertiesService) { }
 
   ngOnInit(): void {
     this.userInput$
       .pipe(debounceTime(500))
       .subscribe((value) => {
         console.log('User input: ', value);
+        this.propertiesService.searchProperties({location: {city: value}})
+          .subscribe((res) => {
+            console.log('za3ma ', res);
+            this.someTemporaryResults = res;
+          });
       })
   }
 
