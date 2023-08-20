@@ -1,0 +1,176 @@
+[
+    {
+        "id": 1,
+        "name": "Luxury Apartment in Downtown",
+        "description": "Spacious and luxurious apartment in the heart of the city.",
+        "location": {
+            "city": "New York",
+            "neighborhood": "Downtown",
+            "postalCode": "10001"
+        },
+        "price": 2500,
+        "bedrooms": 2,
+        "bathrooms": 2.5,
+        "size": 1200,
+        "amenities": [
+            "Swimming Pool",
+            "Fitness Center",
+            "Balcony",
+            "Parking"
+        ],
+        "images": [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ],
+        "contact": {
+            "name": "John Smith",
+            "email": "john@example.com",
+            "phone": "+1 (123) 456-7890"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Modern Studio in San Francisco",
+        "description": "Cozy studio apartment with stunning city views.",
+        "location": {
+            "city": "San Francisco",
+            "neighborhood": "Downtown",
+            "postalCode": "94101"
+        },
+        "price": 1800,
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "size": 600,
+        "amenities": [
+            "Gym",
+            "Rooftop Terrace",
+            "Laundry"
+        ],
+        "images": [
+            "sf_studio1.jpg",
+            "sf_studio2.jpg",
+            "sf_studio3.jpg"
+        ],
+        "contact": {
+            "name": "Alice Johnson",
+            "email": "alice@example.com",
+            "phone": "+1 (987) 654-3210"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Spacious Penthouse in Miami Beach",
+        "description": "Luxurious penthouse with oceanfront views and private rooftop pool.",
+        "location": {
+            "city": "Miami Beach",
+            "neighborhood": "Oceanfront",
+            "postalCode": "33139"
+        },
+        "price": 5500,
+        "bedrooms": 3,
+        "bathrooms": 3.5,
+        "size": 2500,
+        "amenities": [
+            "Private Pool",
+            "Ocean View Balcony",
+            "Concierge Service"
+        ],
+        "images": [
+            "miami_penthouse1.jpg",
+            "miami_penthouse2.jpg",
+            "miami_penthouse3.jpg"
+        ],
+        "contact": {
+            "name": "David Smith",
+            "email": "david@example.com",
+            "phone": "+1 (567) 890-1234"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Cozy Apartment in Paris",
+        "description": "Charming apartment in the heart of Paris with a view of the Eiffel Tower.",
+        "location": {
+            "city": "Paris",
+            "neighborhood": "Champs-Élysées",
+            "postalCode": "75008"
+        },
+        "price": 2800,
+        "bedrooms": 2,
+        "bathrooms": 1.5,
+        "size": 800,
+        "amenities": [
+            "Eiffel Tower View",
+            "Cafes Nearby"
+        ],
+        "images": [
+            "paris_apartment1.jpg",
+            "paris_apartment2.jpg",
+            "paris_apartment3.jpg"
+        ],
+        "contact": {
+            "name": "Sophie Martin",
+            "email": "sophie@example.com",
+            "phone": "+33 (0)1 23 45 67 89"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Beachfront Villa in Bali",
+        "description": "Exquisite beachfront villa with a private infinity pool and lush gardens.",
+        "location": {
+            "city": "Bali",
+            "neighborhood": "Seminyak",
+            "postalCode": "80361"
+        },
+        "price": 7500,
+        "bedrooms": 4,
+        "bathrooms": 4,
+        "size": 3500,
+        "amenities": [
+            "Private Pool",
+            "Beach Access",
+            "Gardens"
+        ],
+        "images": [
+            "bali_villa1.jpg",
+            "bali_villa2.jpg",
+            "bali_villa3.jpg"
+        ],
+        "contact": {
+            "name": "Ravi Patel",
+            "email": "ravi@example.com",
+            "phone": "+62 812-3456-7890"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Modern Downtown Loft in Chicago",
+        "description": "Contemporary loft with open spaces and skyline views.",
+        "location": {
+            "city": "Chicago",
+            "neighborhood": "Downtown",
+            "postalCode": "60602"
+        },
+        "price": 2900,
+        "bedrooms": 1,
+        "bathrooms": 1.5,
+        "size": 1100,
+        "amenities": [
+            "Open Layout",
+            "Skyline Views",
+            "Fitness Center"
+        ],
+        "images": [
+            "chicago_loft_new1.jpg",
+            "chicago_loft_new2.jpg",
+            "chicago_loft_new3.jpg"
+        ],
+        "contact": {
+            "name": "Sarah Adams",
+            "email": "sarah@example.com",
+            "phone": "+1 (312) 555-9876"
+        }
+    }
+]
