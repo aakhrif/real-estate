@@ -11,6 +11,7 @@ import { TabbedComponent } from './widgets/tabbed/tabbed.component';
 import { SearchBoxComponent } from './widgets/search-box/search-box.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ListPropertiesComponent } from './components/list-properties/list-properties.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     HomeComponent,
     TabbedComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    ListPropertiesComponent
   ],
   imports: [
     BrowserModule,
