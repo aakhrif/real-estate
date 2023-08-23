@@ -12,6 +12,8 @@ import { SearchBoxComponent } from './widgets/search-box/search-box.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListPropertiesComponent } from './components/list-properties/list-properties.component';
+import { StoreModule } from '@ngrx/store';
+import { propertiesReducer } from './state/properties.reducer';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { ListPropertiesComponent } from './components/list-properties/list-prope
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({ properties: propertiesReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]

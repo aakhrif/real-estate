@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Subject, debounceTime } from 'rxjs';
 import { PropertiesService } from 'src/app/services/properties.service';
+import { PropertiesApiActions } from 'src/app/state/properties.actions';
+import { selectProperties } from 'src/app/state/properties.selectors';
 
 @Component({
   selector: 'app-search-box',
@@ -10,19 +13,20 @@ import { PropertiesService } from 'src/app/services/properties.service';
 export class SearchBoxComponent implements OnInit {
   userInput$ = new Subject<string>();
   someTemporaryResults = {};
-  constructor(private propertiesService: PropertiesService) { }
 
+  constructor(private propertiesService: PropertiesService, private store: Store) { }
+
+  properties$ = this.store.select(selectProperties);
+  
   ngOnInit(): void {
     this.userInput$
       .pipe(debounceTime(500))
       .subscribe((value) => {
-        console.log('User input: ', value);
         this.propertiesService.searchProperties({location: {city: value}})
-          .subscribe((res) => {
-            console.log('za3ma ', res);
-            this.someTemporaryResults = res;
+          .subscribe((properties) => {
+            this.store.dispatch(PropertiesApiActions.retrievedPropertiesSearchResults({ properties }));
           });
-      })
+    });
   }
 
   onKey(event: any) {

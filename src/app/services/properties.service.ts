@@ -11,8 +11,8 @@ export class PropertiesService {
 
   constructor(private http: HttpClient) { }
 
-  public searchProperties(search: Search): Observable<Property> {
+  public searchProperties(search: Search): Observable<Property[]> {
     const url = "/api/properties/search"
-    return this.http.post<Property>(url, search);
+    return this.http.post<Property[]>(url, search);
   }
 }
