@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListPropertiesComponent } from './components/list-properties/list-properties.component';
 import { StoreModule } from '@ngrx/store';
 import { propertiesReducer } from './state/properties.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { propertiesReducer } from './state/properties.reducer';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    StoreModule.forRoot({ properties: propertiesReducer})
+    StoreModule.forRoot({ properties: propertiesReducer}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [],
   bootstrap: [AppComponent]
