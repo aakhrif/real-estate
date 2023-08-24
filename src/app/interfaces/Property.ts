@@ -1,8 +1,9 @@
 export interface Property {
+    id: number,
     name: string,
     description: string,
     location: {
-        city: string
+        city: string | null
         neighborhood: string,
         postalCode: number
     },

@@ -15,6 +15,7 @@ import { ListPropertiesComponent } from './components/list-properties/list-prope
 import { StoreModule } from '@ngrx/store';
 import { propertiesReducer } from './state/properties.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ImageGalleryComponent } from './components/image-gallery/image-gallery.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     HomeComponent,
     TabbedComponent,
     SearchBoxComponent,
-    ListPropertiesComponent
+    ListPropertiesComponent,
+    ImageGalleryComponent
   ],
   imports: [
     BrowserModule,

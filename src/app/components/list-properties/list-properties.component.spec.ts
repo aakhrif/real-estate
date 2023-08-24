@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListPropertiesComponent } from './list-properties.component';
-
+// To Do test component
 describe('ListPropertiesComponent', () => {
   let component: ListPropertiesComponent;
   let fixture: ComponentFixture<ListPropertiesComponent>;

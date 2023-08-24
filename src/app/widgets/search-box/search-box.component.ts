@@ -30,7 +30,20 @@ export class SearchBoxComponent implements OnInit {
   }
 
   onKey(event: any) {
-    const inputValue = event.target.value;
-    this.userInput$.next(inputValue);
+    let searchValue = event.target.value;
+    let validatedSearchValue = this.validateSearchInput(searchValue);
+    // console.log('validatedSearchValue ', validatedSearchValue)
+    if (validatedSearchValue) {
+      console.log('validatedSearchValue ', validatedSearchValue)
+      this.userInput$.next(validatedSearchValue);
+    }
+  }
+
+  validateSearchInput = (inputValue: string): string | null => {
+    //To Do use lodash
+    if(inputValue.length > 0) {
+      return inputValue.toLowerCase();
+    }
+    return null;
   }
 }
