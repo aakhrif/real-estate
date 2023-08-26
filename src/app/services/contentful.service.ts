@@ -20,10 +20,14 @@ export class ContentfulService {
   });
 
   getEntry(id: string): Observable<any> {
-    console.log('this.accessToken ', this.accessToken)
-    console.log('cdaClient ', this.cdaClient)
     return from(
       this.cdaClient.getEntry(id)
+    );
+  }
+
+  getEntries(query: Object): Observable<any> {
+    return from(
+      this.cdaClient.getEntries(query)
     );
   }
 }
