@@ -23,6 +23,7 @@
     "@ngrx/store-devtools": "^16.2.0",
     "flag-icons": "^6.9.5",
     "material-icons": "^1.13.9",
+    "node-sass": "^9.0.0",
     "normalize.css": "^8.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
