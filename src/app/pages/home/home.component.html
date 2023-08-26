@@ -1,2 +1,9 @@
-<app-list-properties></app-list-properties>
+<ng-container *ngIf="(propertiesLoaded$ | async) as propertiesLoaded; then loaded; else notLoaded">
+</ng-container>
+<ng-template #notLoaded>
+    <app-featured-property></app-featured-property>
+</ng-template>
+<ng-template #loaded>
+    <app-list-properties></app-list-properties>
+</ng-template>
 <app-our-services></app-our-services>

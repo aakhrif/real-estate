@@ -18,6 +18,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ImageGalleryComponent } from './components/image-gallery/image-gallery.component';
 import { OurServicesComponent } from './components/our-services/our-services.component';
 import { ContentCardComponent } from './widgets/content-card/content-card.component';
+import { FeaturedPropertyComponent } from './components/featured-property/featured-property.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ContentCardComponent } from './widgets/content-card/content-card.compon
     ListPropertiesComponent,
     ImageGalleryComponent,
     OurServicesComponent,
-    ContentCardComponent
+    ContentCardComponent,
+    FeaturedPropertyComponent
   ],
   imports: [
     BrowserModule,
