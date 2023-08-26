@@ -5,6 +5,10 @@
 @import "./styles/variables.scss";
 @import "./styles/buttons.scss";
 
+@import '../node_modules/tailwindcss/base';
+@import '../node_modules/tailwindcss/components';
+@import '../node_modules/tailwindcss/utilities';
+
 /* You can add global styles to this file, and also import other style files */
 * {
   box-sizing: border-box;
