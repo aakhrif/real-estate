@@ -22,6 +22,7 @@
     "@ngrx/store": "^16.2.0",
     "@ngrx/store-devtools": "^16.2.0",
     "autoprefixer": "^10.4.15",
+    "contentful": "^10.5.0",
     "flag-icons": "^6.9.5",
     "material-icons": "^1.13.9",
     "node-sass": "^9.0.0",
