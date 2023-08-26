@@ -12,7 +12,7 @@ export class FeaturedPropertyComponent {
   constructor() {
     this.property = {
       id: 12,
-      name: "Penthouse",
+      name: "Poolhouse",
       description: "Awesome and very beautiful Property Penthouse",
       images: [
         "image2.jpg"

@@ -1,3 +1,5 @@
+![real estate ng inc](src/assets/github1.png)
+
 # This is a Real Estate App *** Made with Angular
 
 1. Look for real estates using the Searchbox
