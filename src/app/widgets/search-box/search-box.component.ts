@@ -12,29 +12,29 @@ import { selectProperties } from 'src/app/state/properties.selectors';
 })
 export class SearchBoxComponent implements OnInit {
   userInput$ = new Subject<string>();
-  someTemporaryResults = {};
+  properties$ = this.store.select(selectProperties);
 
   constructor(private propertiesService: PropertiesService, private store: Store) { }
-
-  properties$ = this.store.select(selectProperties);
   
   ngOnInit(): void {
     this.userInput$
       .pipe(debounceTime(500))
       .subscribe((value) => {
-        this.propertiesService.searchProperties({location: {city: value}})
-          .subscribe((properties) => {
-            this.store.dispatch(PropertiesApiActions.retrievedPropertiesSearchResults({ properties }));
-          });
+        this.searchProperties(value);
     });
+  }
+
+  searchProperties(value: string): void {
+    this.propertiesService.searchProperties({location: {city: value}})
+      .subscribe((properties) => {
+        this.store.dispatch(PropertiesApiActions.retrievedPropertiesSearchResults({ properties }));
+      });
   }
 
   onKey(event: any) {
     let searchValue = event.target.value;
     let validatedSearchValue = this.validateSearchInput(searchValue);
-    // console.log('validatedSearchValue ', validatedSearchValue)
     if (validatedSearchValue) {
-      console.log('validatedSearchValue ', validatedSearchValue)
       this.userInput$.next(validatedSearchValue);
     }
   }
