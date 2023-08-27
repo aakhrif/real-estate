@@ -4,6 +4,7 @@ import { Subject, debounceTime } from 'rxjs';
 import { PropertiesService } from 'src/app/services/properties.service';
 import { PropertiesApiActions } from 'src/app/state/properties.actions';
 import { selectProperties } from 'src/app/state/properties.selectors';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-search-box',
@@ -40,8 +41,7 @@ export class SearchBoxComponent implements OnInit {
   }
 
   validateSearchInput = (inputValue: string): string | null => {
-    //To Do use lodash
-    if(inputValue.length > 0) {
+    if(!_.isEmpty(inputValue)) {
       return inputValue.toLowerCase();
     }
     return null;
