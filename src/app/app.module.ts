@@ -10,7 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { TabbedComponent } from './widgets/tabbed/tabbed.component';
 import { SearchBoxComponent } from './widgets/search-box/search-box.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ListPropertiesComponent } from './components/list-properties/list-properties.component';
 import { StoreModule } from '@ngrx/store';
 import { propertiesReducer } from './state/properties.reducer';
@@ -19,6 +19,8 @@ import { ImageGalleryComponent } from './components/image-gallery/image-gallery.
 import { OurServicesComponent } from './components/our-services/our-services.component';
 import { ContentCardComponent } from './widgets/content-card/content-card.component';
 import { FeaturedPropertyComponent } from './components/featured-property/featured-property.component';
+import { LoadingInterceptor } from './interceptors/loading.interceptor';
+import { LoadingSpinnerComponent } from './widgets/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { FeaturedPropertyComponent } from './components/featured-property/featur
     ImageGalleryComponent,
     OurServicesComponent,
     ContentCardComponent,
-    FeaturedPropertyComponent
+    FeaturedPropertyComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,13 @@ import { FeaturedPropertyComponent } from './components/featured-property/featur
     StoreModule.forRoot({ properties: propertiesReducer}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptor,
+      multi: true,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
