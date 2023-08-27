@@ -15,7 +15,7 @@ import { ListPropertiesComponent } from './components/list-properties/list-prope
 import { StoreModule } from '@ngrx/store';
 import { propertiesReducer } from './state/properties.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { ImageGalleryComponent } from './components/image-gallery/image-gallery.component';
+import { ImageGalleryComponent } from './widgets/image-gallery/image-gallery.component';
 import { OurServicesComponent } from './components/our-services/our-services.component';
 import { ContentCardComponent } from './widgets/content-card/content-card.component';
 import { FeaturedPropertyComponent } from './components/featured-property/featured-property.component';

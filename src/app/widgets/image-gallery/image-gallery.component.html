@@ -1,0 +1,5 @@
+<div class="image-gallery">
+    <ng-container *ngIf="slider"><button (click)="prevImage()" class="arrow left">&lt;</button></ng-container>
+    <img [src]="imagesPath + currentImage" class="gallery-image" />
+    <ng-container *ngIf="slider"><button (click)="nextImage()" class="arrow right">&gt;</button></ng-container>
+</div>

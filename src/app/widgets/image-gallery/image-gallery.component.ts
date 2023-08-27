@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class ImageGalleryComponent {
   @Input() images: string[] = [];
   @Input() objectId: number = 0;
+  @Input() slider: boolean = true;
   currentImageIndex: number = 0;
   imagesPath: string = "";
 

@@ -8,6 +8,7 @@ import { Property } from 'src/app/interfaces/Property';
 })
 export class FeaturedPropertyComponent {
   protected property: Property;
+  slider = false;
 
   constructor() {
     this.property = {
