@@ -21,6 +21,7 @@ import { ContentCardComponent } from './widgets/content-card/content-card.compon
 import { FeaturedPropertyComponent } from './components/featured-property/featured-property.component';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { LoadingSpinnerComponent } from './widgets/loading-spinner/loading-spinner.component';
+import { SnackbarComponent } from './widgets/snackbar/snackbar.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { LoadingSpinnerComponent } from './widgets/loading-spinner/loading-spinn
     OurServicesComponent,
     ContentCardComponent,
     FeaturedPropertyComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    SnackbarComponent
   ],
   imports: [
     BrowserModule,

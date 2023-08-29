@@ -1,0 +1,9 @@
+<ng-container *ngIf="message">
+    <div class="fixed inset-x-0 bottom-0 z-50">
+        <div class="text-white py-2 px-4 shadow-md" ngClass="{{snackbarColor}}">
+            <div class="container mx-auto">
+                <p>{{ message }}</p>
+            </div>
+        </div>
+    </div>
+</ng-container>

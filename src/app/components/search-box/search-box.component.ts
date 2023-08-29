@@ -5,6 +5,7 @@ import { PropertiesService } from 'src/app/services/properties.service';
 import { PropertiesApiActions } from 'src/app/state/properties.actions';
 import { selectProperties } from 'src/app/state/properties.selectors';
 import * as _ from 'lodash';
+import { SnackbarService } from 'src/app/services/snackbar.service';
 
 @Component({
   selector: 'app-search-box',
@@ -15,7 +16,7 @@ export class SearchBoxComponent implements OnInit {
   userInput$ = new Subject<string>();
   properties$ = this.store.select(selectProperties);
 
-  constructor(private propertiesService: PropertiesService, private store: Store) { }
+  constructor(private propertiesService: PropertiesService, private store: Store, private snackbarService: SnackbarService) { }
 
   ngOnInit(): void {
     this.userInput$
@@ -38,14 +39,9 @@ export class SearchBoxComponent implements OnInit {
         this.store.dispatch(PropertiesApiActions.retrievedPropertiesSearchResults({ properties }));
 
         if (_.isEmpty(properties)) {
-          this.displayErrorMessageToUser('There was a problem fetching data. Please try again later.')
+          this.snackbarService.showMessage("No Properties found for your search", "red");
         }
       });
-  }
-
-  private displayErrorMessageToUser(message: string): void {
-    // Implement a way to display the error message to the user.
-    // This could involve showing a snackbar, modal, or some other UI element.
   }
 
   onKey(event: any) {
